@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#04534C</color>
+    <color name="colorPrimaryDark">#04524C</color>
+    <color name="colorAccent">#E08412</color>
+    <color name="xanhlachuoi">#0D9686</color>
+    <color name="xanhla">#4CAF50</color>
+    <color name="trang">#FAF1F2F5</color>
+</resources>

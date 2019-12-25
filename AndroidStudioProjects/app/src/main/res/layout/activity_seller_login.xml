@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sellers.SellerLoginActivity">
+
+
+    <ImageView
+        android:id="@+id/img_seller"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/sellerslogin"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/title_login__seller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Người bán đăng nhập"
+        android:gravity="center"
+        android:layout_below="@id/img_seller"
+        android:layout_marginTop="20dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/xanhlachuoi"/>
+
+
+
+
+    <EditText
+        android:id="@+id/seller_login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/title_login__seller"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:hint="Email..."
+        android:inputType="textEmailAddress"
+        />
+
+    <EditText
+        android:id="@+id/seller_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/seller_login_email"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:hint="Mat khau..."
+        android:inputType="textPassword"
+        />
+    <CheckBox
+        android:id="@+id/show_password_ck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hiển thị mật khẩu"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="350dp"/>
+
+    <Button
+        android:id="@+id/seller_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/seller_login_password"
+        android:text="Đăng nhập"
+        android:textSize="18dp"
+        android:textAllCaps="false"
+        android:background="@color/xanhlachuoi"/>
+</RelativeLayout>

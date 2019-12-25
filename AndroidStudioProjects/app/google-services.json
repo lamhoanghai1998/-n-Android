@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "96360124304",
+    "firebase_url": "https://haistore-69aee.firebaseio.com",
+    "project_id": "haistore-69aee",
+    "storage_bucket": "haistore-69aee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96360124304:android:ed3c5a05cee07379162d15",
+        "android_client_info": {
+          "package_name": "com.example.appsimonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96360124304-dokfieq5o084bnb1au0614bmgqor5tgq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appsimonline",
+            "certificate_hash": "2f8c40a850e5d13ba8dacdefb42f7081c86facc8"
+          }
+        },
+        {
+          "client_id": "96360124304-iq4uk9e6e3sutavd642imk4lf5ibkiue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTGE41H1jM-y721jv5itMTBtKn_VZ2fYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96360124304-iq4uk9e6e3sutavd642imk4lf5ibkiue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
