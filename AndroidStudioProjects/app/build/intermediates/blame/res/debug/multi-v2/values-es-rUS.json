@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Download\\AndroidStudioProjects-20191223T042222Z-001\\AndroidStudioProjects\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
+            "outputFile": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
             "map": [
                 {
                     "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-ui-auth-4.3.1.aar\\740024975d9c9804af4c885ec1205191\\res\\values-es-rUS\\values-es-rUS.xml",

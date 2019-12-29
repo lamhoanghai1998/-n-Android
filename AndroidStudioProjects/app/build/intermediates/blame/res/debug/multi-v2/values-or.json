@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Download\\AndroidStudioProjects-20191223T042222Z-001\\AndroidStudioProjects\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-or\\values-or.xml",
+            "outputFile": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-or\\values-or.xml",
             "map": [
                 {
                     "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\f9e407b5bc6ca9cd4e55cb33de55d8c0\\res\\values-or\\values.xml",

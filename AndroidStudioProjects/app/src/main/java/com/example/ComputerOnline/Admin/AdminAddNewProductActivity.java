@@ -136,7 +136,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
     private void StoreProductInformation()
     {
-        loadingBar.setTitle("Thêm sim mới");
+        loadingBar.setTitle("Thêm linh kiện mới");
         loadingBar.setMessage("Admin vui lòng chờ tí!! Hệ thống đang đưa thông tin linh kiện lên trang đăng");
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();

@@ -2,7 +2,7 @@ package com.example.ComputerOnline.Model;
 
 public class Products {
 
-    private String pname, description, price, image, category, pid, date, time,productState;
+    public String pname, description, price, image, category, pid, date, time,productState;
 
     public Products()
     {

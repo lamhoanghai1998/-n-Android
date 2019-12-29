@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ComputerOnline.Admin.AdminCheckNewProductsActivity;
 import com.example.ComputerOnline.Model.Cart;
 import com.example.ComputerOnline.Prevalent.Prevalent;
 import com.example.ComputerOnline.R;
@@ -28,6 +30,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class CartActivity extends AppCompatActivity {
 
@@ -36,6 +39,7 @@ public class CartActivity extends AppCompatActivity {
 
     private Button NextProcessBtn,logOutBtn;
     private TextView txtTotalAmount, txtMsg1;
+
 
     private int overTotalPrice = 0;
 
@@ -69,15 +73,45 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 txtTotalAmount.setText( "Total Price = $" + String.valueOf( overTotalPrice ) );
-                if (overTotalPrice == 0) {
-                    Toast.makeText( CartActivity.this, "Vui lòng đặt một linh kiện trước khi thanh toán", Toast.LENGTH_SHORT ).show();
-                }
-                else {
-                    Intent intent = new Intent( CartActivity.this, ConfirmFinalOrderActivity.class );
-                    intent.putExtra( "Total Price", String.valueOf( overTotalPrice ) );
-                    startActivity( intent );
-                    finish();
-                }
+                CharSequence options[] = new CharSequence[]
+                        {
+                                "Chơi",
+                                "Thôi"
+                        };
+                AlertDialog.Builder builder = new AlertDialog.Builder( CartActivity.this );
+                builder.setTitle( "Tổng tiền thanh toán của là "+ overTotalPrice+ " VNĐ");
+                builder.setItems( options, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int position) {
+                          if (overTotalPrice == 0)
+                        {
+                            Toast.makeText( CartActivity.this, "Hãy kiểm tra giỏ của bạn kỹ càng trước khi thanh toán!!", Toast.LENGTH_SHORT ).show();
+                        }
+                       else if(position == 1)
+                        {
+                            Toast.makeText( CartActivity.this, "Vui lòng đặt một linh kiện trước khi thanh toán", Toast.LENGTH_SHORT ).show();
+                        }
+                       else if(position == 0)
+                        {
+                            Intent intent = new Intent( CartActivity.this, ConfirmFinalOrderActivity.class );
+                            intent.putExtra( "Total Price", String.valueOf( overTotalPrice ) );
+                            startActivity( intent );
+                            finish();
+                        }
+
+                    }
+                } );
+                builder.show();
+
+//                if (overTotalPrice == 0) {
+//                    Toast.makeText( CartActivity.this, "Vui lòng đặt một linh kiện trước khi thanh toán", Toast.LENGTH_SHORT ).show();
+//                }
+//                else {
+//                    Intent intent = new Intent( CartActivity.this, ConfirmFinalOrderActivity.class );
+//                    intent.putExtra( "Total Price", String.valueOf( overTotalPrice ) );
+//                    startActivity( intent );
+//                    finish();
+//                }
             }
         });
     }
@@ -110,6 +144,7 @@ public class CartActivity extends AppCompatActivity {
                 holder.txtProductQuantity.setText("Số lượng = " + model.getQuantity());
                 holder.txtProductPrice.setText("Giá " + model.getPrice() + " VNĐ");
                 holder.txtProductName.setText(model.getPname());
+                Picasso.get().load( model.getImage() ).into( holder.cartImageView );
 
                 int oneTypeProductPrice = ((Integer.valueOf(model.getPrice()))) * Integer.valueOf(model.getQuantity());
                 overTotalPrice = overTotalPrice + oneTypeProductPrice;

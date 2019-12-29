@@ -976,6 +976,7 @@ color abc_tint_spinner
 color abc_tint_switch_track
 color accent_material_dark
 color accent_material_light
+color bac
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -1499,6 +1500,7 @@ drawable hats
 drawable headphoness
 drawable ic_action_sort
 drawable ic_dashboard_black_24dp
+drawable ic_find_button
 drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1539,6 +1541,7 @@ drawable orders
 drawable profile
 drawable purses_bags
 drawable radeon
+drawable radius_btn
 drawable register
 drawable ryzennnn
 drawable select_product_image
@@ -1551,6 +1554,7 @@ drawable sim4g
 drawable sim5g
 drawable simsodep
 drawable sports
+drawable stroke_iptxt
 drawable sweather
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1634,6 +1638,7 @@ id button_next
 id button_resend_email
 id button_sign_in
 id cancel_action
+id cart_image_view
 id cart_items_layout
 id cart_list
 id cart_logout_btn
