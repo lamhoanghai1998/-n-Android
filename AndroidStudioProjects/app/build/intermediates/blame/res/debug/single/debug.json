@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "D:\\Program Files\\AndroidStudioProjects\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
         "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\Program Files\\AndroidStudioProjects\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_enter.xml.flat",
@@ -24,12 +24,12 @@
         "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_popup_menu_header_item_layout.xml.flat",
-        "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\layout\\abc_popup_menu_header_item_layout.xml"
-    },
-    {
         "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_thumb_material.xml.flat",
         "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_popup_menu_header_item_layout.xml.flat",
+        "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
         "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_btn_ripple_color.xml.flat",
@@ -56,28 +56,28 @@
         "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\a503df18c930cb3a220382b18e3bb3cc\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+        "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
+        "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_light.xml.flat",
         "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
-        "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+        "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\a503df18c930cb3a220382b18e3bb3cc\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_cart.xml.flat",
         "source": "D:\\Program Files\\AndroidStudioProjects\\app\\src\\main\\res\\layout\\activity_cart.xml"
     },
     {
-        "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
-        "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\a503df18c930cb3a220382b18e3bb3cc\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\GoldSea\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5eaf83249c40293c6cf00a99afbf3660\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "D:\\Program Files\\AndroidStudioProjects\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",

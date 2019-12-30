@@ -36,7 +36,7 @@ import java.util.HashMap;
 public class SellerAddNewProductActivity extends AppCompatActivity {
 
     private String CategoryName, Description, Price, Pname, saveCurrentDate, saveCurrentTime;
-    private Button AddNewProductButton;
+    private Button AddNewProductButton, backToSeller;
     private ImageView InputProductImage;
     private EditText InputProductName, InputProductDescription, InputProductPrice;
     private static final int GalleryPick = 1;
@@ -62,6 +62,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
 
 
         AddNewProductButton = (Button) findViewById(R.id.add_new_product);
+        backToSeller = (Button) findViewById(R.id.seller_back);
         InputProductImage = (ImageView) findViewById(R.id.select_product_image);
         InputProductName = (EditText) findViewById(R.id.product_name);
         InputProductDescription = (EditText) findViewById(R.id.product_description);
@@ -85,6 +86,17 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
                 ValidateProductData();
 //                ValidateAddNewProducts();
 
+            }
+        });
+
+        backToSeller.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(SellerAddNewProductActivity.this, SellerProductCategoryActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
             }
         });
 

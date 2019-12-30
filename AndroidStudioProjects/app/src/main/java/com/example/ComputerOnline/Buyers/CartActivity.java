@@ -18,9 +18,11 @@ import android.widget.Toast;
 
 import com.example.ComputerOnline.Admin.AdminCheckNewProductsActivity;
 import com.example.ComputerOnline.Model.Cart;
+import com.example.ComputerOnline.Model.Products;
 import com.example.ComputerOnline.Prevalent.Prevalent;
 import com.example.ComputerOnline.R;
 import com.example.ComputerOnline.ViewHolder.CartViewHolder;
+import com.example.ComputerOnline.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -136,8 +138,9 @@ public class CartActivity extends AppCompatActivity {
         FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter
                 = new FirebaseRecyclerAdapter<Cart, CartViewHolder>(options) {
 
-            //Hiển thị sim trong giỏ hàng
-            // CHỉnh sửa giỏ hàng
+//            CartViewHolder
+//            Hiển thị sim trong giỏ hàng
+//             CHỉnh sửa giỏ hàng
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model)
             {
@@ -212,6 +215,9 @@ public class CartActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         adapter.startListening();
     }
+
+
+
 
 
     //Tạo chức năng kiểm duyệt đơn hàng đã ship chưa

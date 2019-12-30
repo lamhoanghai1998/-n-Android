@@ -1,6 +1,8 @@
 package com.example.ComputerOnline.Buyers;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +16,11 @@ import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.example.ComputerOnline.Model.Products;
 import com.example.ComputerOnline.Prevalent.Prevalent;
 import com.example.ComputerOnline.R;
+import com.example.ComputerOnline.Sellers.SellerAddNewProductActivity;
+import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,6 +29,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
@@ -36,6 +43,11 @@ public class ProductDetailsActivity extends AppCompatActivity {
     private ElegantNumberButton numberButton;
     private TextView productPrice, productDescription, productName;
     private String productID = "", state = "Normal";
+//    private Uri ImageUri;
+//    private String  downloadImageUrl;
+//    private StorageReference ProductImagesRef;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +55,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product_details);
 
         productID = getIntent().getStringExtra("pid");
+//        ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");
+
+
 
 
         addToCartButton = (Button) findViewById(R.id.pd_add_to_cart_button);
@@ -61,11 +76,73 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 if (state.equals("Order Placed") || state.equals("Order Shipped")) {
                     Toast.makeText(ProductDetailsActivity.this, "Bạn có thẻ mua thêm khi đơn hàng được giao đến hoặc được xác thực.", Toast.LENGTH_LONG).show();
                 } else {
-                    addingToCartList();
+
+                   addingToCartList();
                 }
             }
         });
     }
+
+//    private void getUrlImage() {
+//        final StorageReference filePath = ProductImagesRef.child(ImageUri.getLastPathSegment() + ".jpg");
+//
+//        final UploadTask uploadTask = filePath.putFile(ImageUri);
+//
+//
+//        uploadTask.addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e)
+//            {
+//                String message = e.toString();
+//                Toast.makeText( ProductDetailsActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
+//            }
+//        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//            @Override
+//            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
+//            {
+//                Toast.makeText( ProductDetailsActivity.this, "Hình sản phẩm đã được tải lên thành công", Toast.LENGTH_SHORT).show();
+//
+//                Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+//                    @Override
+//                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception
+//                    {
+//                        if (!task.isSuccessful())
+//                        {
+//                            throw task.getException();
+//                        }
+//
+//                        downloadImageUrl = filePath.getDownloadUrl().toString();
+//                        return filePath.getDownloadUrl();
+//                    }
+//                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<Uri> task)
+//                    {
+//                        if (task.isSuccessful())
+//                        {
+//                            downloadImageUrl = task.getResult().toString();
+//
+//                            Toast.makeText( ProductDetailsActivity.this, "Đã lấy được Url thành công", Toast.LENGTH_SHORT).show();
+//
+//                            addingToCartList();
+//                        }
+//                    }
+//                });
+//            }
+//        });
+//    }
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+//    {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        if (resultCode==RESULT_OK  &&  data!=null)
+//        {
+//            ImageUri = data.getData();
+//
+//        }
+//    }
 
 
     @Override
@@ -125,6 +202,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         cartMap.put("pname", productName.getText().toString());
         cartMap.put("price", productPrice.getText().toString());
         cartMap.put("date", saveCurrentDate);
+//        cartMap.put("image",downloadImageUrl );
         cartMap.put("time", saveCurrentTime);
         cartMap.put("quantity", numberButton.getNumber());
         cartMap.put("discount", "");
@@ -145,7 +223,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                             if (task.isSuccessful()) {
                                                 Toast.makeText(ProductDetailsActivity.this, "Đã thêm sản phẩm vào giỏ hàng!.", Toast.LENGTH_SHORT).show();
 
-                                                Intent intent = new Intent(ProductDetailsActivity.this, HomeActivity.class);
+
+                                                Intent intent = new Intent(ProductDetailsActivity.this,HomeActivity.class);
                                                 startActivity(intent);
                                             }
                                         }
@@ -156,6 +235,12 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
                 });
     }
+
+
+
+
+
+
 
     //
 //
@@ -169,9 +254,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     Products products = dataSnapshot.getValue(Products.class);
 
 
-                    productName.setText(products.getPname());
+                    productName.setText("Tên linh kiện: "+products.getPname());
                     productPrice.setText(products.getPrice());
-                    productDescription.setText(products.getDescription());
+                    productDescription.setText("Mô tả: "+products.getDescription());
                     Picasso.get().load(products.getImage()).into(productImage);
                 }
             }

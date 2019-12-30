@@ -1615,6 +1615,7 @@ id asus
 id asus_rog
 id async
 id auto
+id back_to_admin
 id barrier
 id beginning
 id bevel
@@ -1912,6 +1913,7 @@ id select_product_image
 id selected
 id seller_address
 id seller_already_have_account_btn
+id seller_back
 id seller_begin
 id seller_email
 id seller_home_list

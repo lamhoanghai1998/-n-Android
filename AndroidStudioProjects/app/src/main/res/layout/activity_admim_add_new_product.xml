@@ -19,6 +19,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn hình ảnh đại diện cho sản phẩm"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="85dp"/>
 
 
     <EditText
@@ -27,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/select_product_image"
         android:inputType="textMultiLine"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:padding="20dp"
         android:hint="Tên linh kiện"
         android:layout_marginLeft="45dp"
@@ -76,6 +84,21 @@
         android:layout_marginRight="45dp"
         android:padding="17dp"
         android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="@drawable/buttons"
+        />
+    <Button
+        android:id="@+id/back_to_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_new_product"
+        android:text="Quay lại"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:padding="17dp"
+        android:layout_marginTop="10dp"
         android:textSize="18sp"
         android:textAllCaps="false"
         android:textColor="@android:color/white"

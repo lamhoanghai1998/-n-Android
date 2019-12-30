@@ -9,8 +9,8 @@ import com.example.ComputerOnline.Interface.ItemClickListner;
 import com.example.ComputerOnline.R;
 
 public class ProductViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-    public TextView txtProductName, txtProductDescription, txtProductPrice;
-    public ImageView imageView;
+    public TextView txtProductName, txtProductDescription, txtProductPrice,txtProductQuantity;
+    public ImageView imageView,cartImageView;
     public ItemClickListner listner;
 
 
@@ -18,11 +18,12 @@ public class ProductViewHolder extends RecyclerView.ViewHolder implements View.O
     {
         super(itemView);
 
-
+        cartImageView = (ImageView) itemView.findViewById( R.id.cart_image_view ) ;
         imageView = (ImageView) itemView.findViewById(R.id.product_image);
         txtProductName = (TextView) itemView.findViewById(R.id.product_name);
         txtProductDescription = (TextView) itemView.findViewById(R.id.product_description);
         txtProductPrice = (TextView) itemView.findViewById(R.id.product_price);
+        txtProductQuantity = (TextView) itemView.findViewById(R.id.cart_product_quantity);
     }
 
     public void setItemClickListner(ItemClickListner listner)
